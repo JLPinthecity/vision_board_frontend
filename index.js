@@ -29,7 +29,8 @@ function renderItems(items){
     })
 };
 
-function createFormHandler(){
-
+function createFormHandler(event){
+  event.preventDefault()
+  console.log(event)
 };
 
