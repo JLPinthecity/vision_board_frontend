@@ -43,10 +43,12 @@ function createFormHandler(event){
 
 function postFetchRequest(title, description, image_url, url, category_id){
     const formData = {
-        
-    }
-   
-   
+        title: title,
+        description: description, 
+        image_url: image_url
+        url: url, 
+        category_id: category_id 
+    };
    
     const configObj = {
        method: "POST",
@@ -55,8 +57,8 @@ function postFetchRequest(title, description, image_url, url, category_id){
            "Accept": "application/json"
        }
        body: JSON.stringify(formData)
-   }
+   };
 
-
-}
+    fetch(endPoint, configObj)
+};
 
