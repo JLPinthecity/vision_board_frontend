@@ -13,7 +13,7 @@ function getItems(){
 function renderItems(items){ 
     items.forEach(item => {
      const itemContainer = `
-        <div data-id=${item.id}> 
+        <div id="item" data-id=${item.id}> 
           <img src=${item.attributes.image_url}>
           <a href="${item.attributes.url}"><h3>${item.attributes.title}</h3></a>
           <p><strong>Category:</strong> ${item.attributes.category.name}<p>
