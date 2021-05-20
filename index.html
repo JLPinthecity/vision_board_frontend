@@ -3,19 +3,19 @@
   <head>
       <meta charset="utf-8">
       <title>Vision Board</title>
-      <script type="text/javascript" src="index.js"></script>
   </head>
 
 <body>
-  <h1>Create Your Own Vision Board</h1>
+  <h1>Your Vision Board</h1>
   <div id="vision-board-container">
+
   </div>
 
 
   <form id="create-vision-board-item-form">
     <h3>Add a new item:</h3>
     <form id="item-form">
-        <label for="item-title">Title:</label>
+        <label for="item-title">Goal:</label>
         <input type="text" name="title" id="item-title"><br><br>
 
         <label for="item-description">Description:</label>
@@ -29,17 +29,17 @@
 
         <label for="item-category">Choose an item category:</label>
         <select id="categories" name="categories">
-            <option value"1"></option>
-            <option value"2"></option>
-            <option value"3"></option>
-            <option value"4"></option>
+            <option value"1">Travel</option>
+            <option value"2">Career</option>
+            <option value"3">Self Care</option>
+            <option value"4">Home</option>
         </select>
+
+        <input type="submit" value="Create">
         <br><br>
-
-
     </form>
+
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
-
-<!-- item has title, description, image_url, url, category_id -->
