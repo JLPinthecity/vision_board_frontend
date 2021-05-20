@@ -60,5 +60,7 @@ function postFetchRequest(title, description, image, url, category){
    };
 
     fetch(endPoint, configObj)
+    .then(r => r.json())
+    .then(userSubmittedItem => renderNewItem(userSubmittedItem))
+   
 };
-
