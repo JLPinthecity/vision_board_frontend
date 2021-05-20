@@ -41,13 +41,13 @@ function createFormHandler(event){
   postFetchRequest(titleInput, descriptionInput, imageInput, itemLink, categoryId)
 };
 
-function postFetchRequest(title, description, image_url, url, category_id){
+function postFetchRequest(title, description, image, url, category){
     const formData = {
         title: title,
         description: description, 
-        image_url: image_url
+        image_url: image,
         url: url, 
-        category_id: category_id 
+        category_id: category 
     };
    
     const configObj = {
@@ -55,7 +55,7 @@ function postFetchRequest(title, description, image_url, url, category_id){
        headers: {
            "Content-Type": "application/json",
            "Accept": "application/json"
-       }
+       },
        body: JSON.stringify(formData)
    };
 
