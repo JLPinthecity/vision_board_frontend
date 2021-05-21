@@ -2,13 +2,14 @@ class Item {
 
     static all = []
 
-    constructor(data){
+    constructor(item, itemAttributes){
     //setting up properties of item
-        this.title = title
-        this.description = description
-        this.image_url = image_url
-        this.url = url
-        this.category_id = category_id
+        this.id = item.id
+        this.title = itemAttributes.title
+        this.description = itemAttributes.description
+        this.image_url = itemAttributes.image_url
+        this.url = itemAttributes.url
+        this.category = itemAttributes.category
 
 
     //remembering all the items

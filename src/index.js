@@ -14,7 +14,8 @@ function getItems(){
 };
 
 function renderItems(items){ 
-    items.forEach(item => {renderNewItem(item)
+    items.forEach(item => {
+        let newItem = new Item(item, item.attributes)
     })
 };
 
