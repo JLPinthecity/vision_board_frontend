@@ -2,13 +2,13 @@ class Item {
 
     static all = []
 
-    constructor(item, itemAttributes) {
-        this.id = item.id
-        this.title = itemAttributes.title
-        this.description = itemAttributes.description
-        this.image_url = itemAttributes.image_url
-        this.url = itemAttributes.url
-        this.category = itemAttributes.category
+    constructor({id, title, description, image_url, url, category}) {
+        this.id = id
+        this.title = title
+        this.description = description
+        this.image_url = image_url
+        this.url = url
+        this.category = category
         Item.all.push(this)
     };
     

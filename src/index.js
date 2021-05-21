@@ -10,13 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
 function getItems(){
     fetch(endPoint)
     .then(r => r.json())
-    .then(json => renderItems(json.data))
+    .then(json => renderItems(json))
 };
 
-function renderItems(items){ 
+function renderItems(arg){ 
+    const items = arg["data"]
     items.forEach(item => {
-       let newItem = new Item(item, item.attributes)
-       document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
+        debugger
+       let newItem = new Item({id: item.id, ...item.attributes}) 
+    //    document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
+
     })
 };
 
@@ -48,6 +51,7 @@ function postFetchRequest(title, description, image_url, url, category_id){
     .then(item => {
         let newItem = new Item(item, item.attributes)
         document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
+
     })
 };
 
