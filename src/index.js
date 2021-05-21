@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function createFormHandler(event){
   event.preventDefault()
   itemApi.createItem()
+  event.target.reset()
 };
 
 
