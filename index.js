@@ -41,26 +41,34 @@ function createFormHandler(event){
   postFetchRequest(titleInput, descriptionInput, imageInput, itemLink, categoryId)
 };
 
-function postFetchRequest(title, description, image, url, category){
-    const formData = {
-        title: title,
-        description: description, 
-        image_url: image,
-        url: url, 
-        category_id: category 
-    };
+function postFetchRequest(title, description, image_url, url, category_id){
+    const formData = {title, description, image_url, url, category_id};
    
     const configObj = {
        method: "POST",
        headers: {
            "Content-Type": "application/json",
-           "Accept": "application/json"
        },
        body: JSON.stringify(formData)
    };
 
     fetch(endPoint, configObj)
     .then(r => r.json())
-    .then(userSubmittedItem => renderNewItem(userSubmittedItem))
-   
+    .then(item => renderNewItem(item.data))
 };
+
+function renderNewItem(item){
+    const newItemAdded = `
+    <div data-id=${item.id}> 
+      <img src=${item.attributes.image_url}>
+      <a href="${item.attributes.url}" target="_blank"><h3>${item.attributes.title}</h3></a>
+      <p><strong>Category:</strong> ${item.attributes.category.name}<p>
+      <p font-size:10px;>${item.attributes.description}</p>
+    </div>`;
+    const visionBoardContainer = document.getElementById("vision-board-container")
+
+    visionBoardContainer.innerHTML += newItemAdded
+
+  }
+  
+  
