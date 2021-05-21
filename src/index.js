@@ -15,7 +15,8 @@ function getItems(){
 
 function renderItems(items){ 
     items.forEach(item => {
-        let newItem = new Item(item, item.attributes)
+       let newItem = new Item(item, item.attributes)
+       document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
     })
 };
 
@@ -44,19 +45,10 @@ function postFetchRequest(title, description, image_url, url, category_id){
 
     fetch(endPoint, configObj)
     .then(r => r.json())
-    .then(item => renderNewItem(item.data))
+    .then(item => {
+        let newItem = new Item(item, item.attributes)
+        document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
+    })
 };
 
-function renderNewItem(item){
-    const newItemAdded = `
-    <div data-id=${item.id}> 
-      <img src=${item.attributes.image_url}>
-      <a href="${item.attributes.url}" target="_blank"><h3>${item.attributes.title}</h3></a>
-      <p><strong>Category:</strong> ${item.attributes.category.name}<p>
-      <p font-size:10px;>${item.attributes.description}</p>
-    </div>`;
-    const visionBoardContainer = document.getElementById("vision-board-container")
-
-    visionBoardContainer.innerHTML += newItemAdded
-  }
 
