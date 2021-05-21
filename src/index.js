@@ -1,18 +1,10 @@
 const itemForm = document.getElementById("create-vision-board-item-form")
 
 document.addEventListener('DOMContentLoaded', function() {
-    getItems();
+    itemApi.getItems();
     itemForm.addEventListener("submit", (event) => createFormHandler(event));
 }); 
 
-
-function renderItems(arg){ 
-    const items = arg["data"]
-    items.forEach(item => {
-       const newItem = new Item({id: item.id, ...item.attributes}) 
-       newItem.appendToDom()
-    })
-};
 
 function createFormHandler(event){
   event.preventDefault()
