@@ -1,4 +1,3 @@
-const endPoint = "http://localhost:3000/api/v1/items"
 const itemForm = document.getElementById("create-vision-board-item-form")
 
 document.addEventListener('DOMContentLoaded', function() {
