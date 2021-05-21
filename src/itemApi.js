@@ -1,6 +1,3 @@
+class itemApi(){
 
-
-
-
-
-//handle all fetch requests for items
+};

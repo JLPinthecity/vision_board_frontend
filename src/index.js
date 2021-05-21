@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     itemForm.addEventListener("submit", (event) => createFormHandler(event));
 }); 
 
-
 function getItems(){
     fetch(endPoint)
     .then(r => r.json())
