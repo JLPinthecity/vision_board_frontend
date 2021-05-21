@@ -16,10 +16,7 @@ function getItems(){
 function renderItems(arg){ 
     const items = arg["data"]
     items.forEach(item => {
-        debugger
        let newItem = new Item({id: item.id, ...item.attributes}) 
-    //    document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
-
     })
 };
 
