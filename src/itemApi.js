@@ -15,9 +15,38 @@ class ItemApi {
         })
     };
 
-
-
-
+    createItem(){
+        const title = document.getElementById("item-title").value
+        const description = document.getElementById("item-description").value
+        const image_url = document.getElementById("item-link").value
+        const url = document.getElementById("item-url").value
+        const categorySelection = document.getElementById("categories").value
+        const category_id = parseInt(categorySelection)
+   
+        const formData = {title, description, image_url, url, category_id};
+       
+        const configObj = {
+           method: "POST",
+           headers: {
+               "Content-Type": "application/json",
+           },
+           body: JSON.stringify(formData)
+       };
+    
+        fetch(this.endPoint, configObj)
+        .then(r => r.json())
+        .then(json => {
+            const i = new Item({id: json.data.id, ...json.data.attributes})
+            i.appendToDom()
+        })
 
 };
+
+};
+
+
+
+
+
+
 
