@@ -16,7 +16,8 @@ function getItems(){
 function renderItems(arg){ 
     const items = arg["data"]
     items.forEach(item => {
-       let newItem = new Item({id: item.id, ...item.attributes}) 
+       const newItem = new Item({id: item.id, ...item.attributes}) 
+       newItem.appendToDom()
     })
 };
 
