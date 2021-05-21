@@ -11,20 +11,20 @@ class Item {
         this.url = url
         this.category = category
 
-        this.element = document.createElement("li") //set the html element that will contain item card
-
+        this.element = document.createElement("div") //set the html element that will contain item card
+        this.element.setAttribute("data-id", this.id)
+   
         Item.all.push(this)
  
     }
 
     render() {
         this.element.innerHTML = `
-          <div data-id=${this.id}> 
             <img src=${this.image_url}>
             <a href="${this.url}" target="_blank"><h3>${this.title}</h3></a>
             <p><strong>Category:</strong> ${this.category.name}<p>
             <small class="text-muted">${this.description}</small>
-          </div> `  
+            `  
         return this.element //returning it would mke it easier to attach method to dom
 
     };
