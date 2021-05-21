@@ -1,4 +1,6 @@
 const itemForm = document.getElementById("create-vision-board-item-form")
+const endPoint = "http://localhost:3000/api/v1/items"
+const itemApi = new ItemApi()
 
 document.addEventListener('DOMContentLoaded', function() {
     itemApi.getItems();
@@ -31,10 +33,10 @@ function postFetchRequest(title, description, image_url, url, category_id){
 
     fetch(endPoint, configObj)
     .then(r => r.json())
-    .then(item => {
-        let newItem = new Item(item, item.attributes)
-        document.getElementById("vision-board-container").innerHTML += newItem.renderItemCard()
-
+    .then(json => {
+        const i = new Item({id: json.data.id, ...json.data.attributes})
+        i.appendToDom()
+           
     })
 };
 

@@ -1,8 +1,10 @@
-class itemApi {
+class ItemApi {
 
-    static endPoint = "http://localhost:3000/api/v1/items"
+    constructor (){
+        this.endPoint = "http://localhost:3000/api/v1/items"
+    }
 
-    static getItems(){
+    getItems(){
         fetch(this.endPoint)
         .then(r => r.json())
         .then(json => {
