@@ -1,1 +1,6 @@
-console.log("in itemapi")
+
+
+
+
+
+//handle all fetch requests for items

@@ -3,7 +3,6 @@ class Item {
     static all = []
 
     constructor(item, itemAttributes) {
-        //setting up properties of item
         this.id = item.id
         this.title = itemAttributes.title
         this.description = itemAttributes.description
@@ -15,7 +14,6 @@ class Item {
     
 
     renderItemCard() {
-        //this is instance of item 
         return `
         <div data-id=${this.id}> 
           <img src=${this.image_url}>
@@ -26,3 +24,13 @@ class Item {
     };
     
 }
+
+
+
+
+
+//item class responsible for:
+//remembering all items
+//setting up properties of each item 
+//html we want on dom for each item
+//attach event listeners to each item
