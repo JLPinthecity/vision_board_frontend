@@ -43,7 +43,10 @@ class Item {
             Item.container.innerHTML = ""
             filteredItems.forEach(filteredItem => filteredItem.appendToDom())
         }
-       
+        else {
+            Item.container.innerHTML = ""
+            Item.all.forEach(i => i.appendToDom())
+        }
     }
 
 }
