@@ -18,17 +18,21 @@ class Category {
         this.element.setAttribute("class", "cat-btn")
         return this.element
     }
-
+    
     appendToDom(){
         Category.container.appendChild(this.render())
         this.addListeners()
     };
 
     addListeners(){
-
+        this.element.addEventListener("click", this.handleClick)
     }
 
-    
+    handleClick = (e) => {
+        debugger
+    }
+   
+   
 
 }
 

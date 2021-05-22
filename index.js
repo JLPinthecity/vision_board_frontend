@@ -3,10 +3,12 @@ const endPoint = "http://localhost:3000/api/v1/items"
 const itemApi = new ItemApi()
 const categoryApi = new CategoryApi()
 
+
 document.addEventListener('DOMContentLoaded', function() {
     itemApi.getItems();
     categoryApi.getCategories();
     itemForm.addEventListener("submit", (event) => createFormHandler(event));
+    
 }); 
 
 function createFormHandler(event){
@@ -14,6 +16,8 @@ function createFormHandler(event){
   itemApi.createItem()
   event.target.reset()
 };
+
+
 
 
 
