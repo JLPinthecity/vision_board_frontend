@@ -15,6 +15,7 @@ class Category {
     render(){
         this.element.innerHTML = this.name
         this.element.id = `category-${this.id}`
+        this.element.setAttribute("class", "cat-btn")
         return this.element
     }
 
