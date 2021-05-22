@@ -36,12 +36,12 @@ class Item {
     static filterByCategory(filteredCategory){
         if(filteredCategory){
             const filteredItems = Item.all.filter((item) => {
-           
                 return item.category.id === parseInt(filteredCategory.id)
               
             })
-            debugger
-           
+            //we want to return only filtered items
+            Item.container.innerHTML = ""
+            filteredItems.forEach(filteredItem => filteredItem.appendToDom())
         }
        
     }
