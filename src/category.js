@@ -6,8 +6,18 @@ class Category {
       this.id = id 
       this.name = name
 
-      
+      this.element = document.createElement("button")
+
+      Category.all.push(this)
     }
+
+    render(){
+        
+    }
+
+    appendToDom(){
+
+    };
 
 }
 
