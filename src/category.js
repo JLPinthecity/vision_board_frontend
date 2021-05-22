@@ -35,8 +35,9 @@ class Category {
                 cat.element.classList.add('active')
                 filteredCategory = cat
             }
-            else{
+            else {
                 cat.element.classList.remove('active')
+                debugger
             }
         })
         Item.filterByCategory(filteredCategory)

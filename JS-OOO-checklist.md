@@ -54,7 +54,7 @@
 - [x] 3. Link to the new JS file in your `index.html` (ex: `<script type="text/javascript" src="src/syllabus.js"></script>`)
 - [x] 4. Create a constructor that pushes all instances of `this` into an empty array (See part 4 notes for example)
 - [x] 5. Refactor render functionality by creating a render function in your JS class
-- [ ] 6. For future use, create a static method in your JS class that finds an object based on it's id. (In the PART 4 notes we see how this would be useful for 'update/`PATCH`' functionality)
+- [x] 6. For future use, create a static method in your JS class that finds an object based on it's id. (In the PART 4 notes we see how this would be useful for 'update/`PATCH`' functionality)
 
 ### Bonus
 - [ ] Leverage a CSS framework to improve the styling of your application
@@ -64,7 +64,7 @@
   - Not bootstrap: [Materialize](https://materializecss.com/)
 
 ### Confirm
-- [ ] You have a large number of small Git commits
-- [ ] Your commit messages are meaningful
-- [ ] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [x] You have a large number of small Git commits
+- [x] Your commit messages are meaningful
+- [x] You made the changes in a commit that relate to the commit message
+- [x] You don't include changes in a commit that aren't related to the commit message
