@@ -6,11 +6,9 @@ A vision board is a fun way to set your intentions for the future. For many succ
 
 To find out more about this project, check out my Medium post about the process. 
 
-## Installation
+[Link to project backend](https://github.com/JLPinthecity/vision_board_backend)
 
-
-
-## Usage
+## 
 
 ```python
 import foobar
