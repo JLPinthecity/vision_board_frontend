@@ -15,7 +15,6 @@ class Item {
         this.element.setAttribute("data-id", this.id)
    
         Item.all.push(this)
- 
     }
 
     render() {
@@ -26,16 +25,13 @@ class Item {
             <small class="text-muted">${this.description}</small>
         `  
         return this.element //returning it would mke it easier to attach method to dom
-
     };
 
   
     appendToDom(){
       this.render()
       Item.container.appendChild(this.element)
-   
     }
-
 
 }
 

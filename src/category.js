@@ -23,6 +23,8 @@ class Category {
         Category.container.appendChild(this.render())
     };
 
+    
+
 }
 
 
