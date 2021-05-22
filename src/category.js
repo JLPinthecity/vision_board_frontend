@@ -21,7 +21,12 @@ class Category {
 
     appendToDom(){
         Category.container.appendChild(this.render())
+        this.addListeners()
     };
+
+    addListeners(){
+
+    }
 
     
 
