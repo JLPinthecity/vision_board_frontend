@@ -1,11 +1,18 @@
-h1 {
+header {
     font-family: 'Newsreader', serif;
     font-size: 80px;
     text-align: center;
-    color: #092B09;
+    color: rgb(0, 73, 46);
    }
+
+p {
+    text-align: center;
+    color: rgb(24, 1, 67);
+}
 
 
 body{
       font-family: 'Futura';
+      background-color: rgb(260 241 224);
+    
     } 
