@@ -2,7 +2,9 @@ class Category {
     
     static all = []
 
-    constructor 
+    constructor(){
+        
+    }
 
 }
 

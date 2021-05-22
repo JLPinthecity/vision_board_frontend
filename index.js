@@ -5,6 +5,7 @@ const categoryApi = new CategoryApi()
 
 document.addEventListener('DOMContentLoaded', function() {
     itemApi.getItems();
+    categoryApi.getCategories();
     itemForm.addEventListener("submit", (event) => createFormHandler(event));
 }); 
 
