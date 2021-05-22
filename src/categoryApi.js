@@ -7,8 +7,11 @@ class CategoryApi {
     getCategories(){
         fetch(this.endPoint)
         .then(r => r.json())
-        .then(json => {
-            debugger
+        .then(json => { 
+            json["data"].forEach(category => {
+                debugger
+                const newCategory = new Category({id: category.id, ...category.attributes})
+            })
         })
     }
 
