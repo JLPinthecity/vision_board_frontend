@@ -29,7 +29,16 @@ class Category {
     }
 
     handleClick = (e) => {
-        debugger
+        let filteredCategory 
+        Category.all.forEach(cat => {
+            if(cat.element === this.element){
+                cat.element.classList.add('active')
+                filteredCategory = cat
+            }
+            else{
+                cat.element.classList.remove('active')
+            }
+        })
     }
    
    
