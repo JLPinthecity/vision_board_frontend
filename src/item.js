@@ -33,6 +33,19 @@ class Item {
       Item.container.appendChild(this.element)
     }
 
+    static filterByCategory(filteredCategory){
+        if(filteredCategory){
+            const filteredItems = Item.all.filter((item) => {
+           
+                return item.category.id === parseInt(filteredCategory.id)
+              
+            })
+            debugger
+           
+        }
+       
+    }
+
 }
 
 //item class responsible for:
@@ -40,3 +53,5 @@ class Item {
 //setting up properties of each item 
 //html we want on dom for each item
 //attach event listeners to each item
+
+//add filter by category method 

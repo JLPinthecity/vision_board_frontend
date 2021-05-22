@@ -39,6 +39,7 @@ class Category {
                 cat.element.classList.remove('active')
             }
         })
+        Item.filterByCategory(filteredCategory)
     }
    
    
