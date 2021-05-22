@@ -1,0 +1,5 @@
+class Category {
+    
+    static all = []
+
+}
