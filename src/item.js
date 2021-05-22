@@ -24,7 +24,7 @@ class Item {
             <a href="${this.url}" target="_blank"><h3>${this.title}</h3></a>
             <p><strong>Category:</strong> ${this.category.name}<p>
             <small class="text-muted">${this.description}</small>
-            `  
+        `  
         return this.element //returning it would mke it easier to attach method to dom
 
     };

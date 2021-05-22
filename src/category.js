@@ -1,22 +1,25 @@
 class Category {
     
     static all = []
+    static container = document.getElementById("cat-container")
 
     constructor({id, name}){
-      this.id = id 
-      this.name = name
+        this.id = id 
+        this.name = name
 
-      this.element = document.createElement("button")
+        this.element = document.createElement("button")
 
-      Category.all.push(this)
+        Category.all.push(this)
     }
 
     render(){
-        
+        this.element.innerHTML = this.name
+        this.element.id = `category-${this.id}`
+        return this.element
     }
 
     appendToDom(){
-
+        Category.container.appendChild(this.render())
     };
 
 }
