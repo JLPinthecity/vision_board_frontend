@@ -2,8 +2,9 @@ class Category {
     
     static all = []
 
-    constructor(){
-        
+    constructor({id, name}){
+      this.id = id 
+      this.name = name
     }
 
 }

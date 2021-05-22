@@ -9,8 +9,8 @@ class CategoryApi {
         .then(r => r.json())
         .then(json => { 
             json["data"].forEach(category => {
-                debugger
                 const newCategory = new Category({id: category.id, ...category.attributes})
+                debugger
             })
         })
     }
