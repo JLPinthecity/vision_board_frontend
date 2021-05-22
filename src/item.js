@@ -13,7 +13,9 @@ class Item {
 
         this.element = document.createElement("div") //set the html element that will contain item card
         this.element.setAttribute("data-id", this.id)
-   
+
+        this.element.addEventListener('click', this.handleEditorDelete)
+
         Item.all.push(this)
     }
 
@@ -24,10 +26,10 @@ class Item {
             <p><strong>Category:</strong> ${this.category.name}<p>
             <small class="text-muted">${this.description}</small>
             <br><br>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button class="edit" data-id=${this.id}>Edit</button>
+            <button class="delete" data-id=${this.id}>Delete</button>
         `  
-        return this.element //returning it would mke it easier to attach method to dom
+        return this.element //returning it would mke it easier to attach method to dom 
     };
 
   
@@ -51,6 +53,18 @@ class Item {
             Item.all.forEach(i => i.appendToDom())
         }
     }
+
+    handleEditorDelete = (e) => {
+        console.log("inhandleclick")
+        if(e.target.innerText === "Edit"){
+
+        }
+        else if (){
+            
+        }
+        } else if(){
+
+        }
 
 }
 
