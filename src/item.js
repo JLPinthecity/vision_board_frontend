@@ -62,8 +62,10 @@ class Item {
            this.deleteItem(e)
         }
         else if(e.target.innerText === "Edit"){
-            console.log("inside edit")
             this.editItem(e)
+        }
+        else if(e.target.innerText === "Save"){
+            e.target.innerText = "Edit"
         }
     
      }
