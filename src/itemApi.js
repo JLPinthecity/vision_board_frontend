@@ -61,7 +61,6 @@ class ItemApi {
    
         const editFormData = {title: editedTitle , description: editedDesc, id: itemId};
 
-        debugger
         const configObj = {
            method: "PATCH",
            headers: {
@@ -72,14 +71,9 @@ class ItemApi {
        
        };
     
-        fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
+        fetch(`http://localhost:3000/api/v1/items/${itemId}`, configObj)
         .then(r => r.json())
-        .then(json => {
-            // const i = new Item({id: json.data.id, ...json.data.attributes})
-            // i.appendToDom()
-        })
-    
-        debugger
+        .then(json => editedItem.render())
     }
 
 

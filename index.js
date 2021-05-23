@@ -4,6 +4,7 @@ const itemApi = new ItemApi()
 const categoryApi = new CategoryApi()
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     itemApi.getItems();
     categoryApi.getCategories();
