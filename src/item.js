@@ -54,19 +54,36 @@ class Item {
         }
     }
 
-    handleEditorDelete = (e) => {
-        console.log("inhandleclick")
-        if(e.target.innerText === "Edit"){
+     handleEditorDelete = (e) => {
+        e.preventDefault()
+        if(e.target.innerText === "Delete"){
+           this.deleteItem(e)
 
+      
         }
-        else if (){
+    
+     }
+
+     //optimistic rendering
+     deleteItem(e){
+        e.target.parentElement.parentElement
+        const id = this.id
+
+         debugger
+         //if delete, remove element
+        //submit fetch request to delete
+     }
+        
             
-        }
-        } else if(){
-
-        }
-
 }
+        
+        //if edit
+        //event: patch
+        //dom: turn button to save 
+
+
+
+ 
 
 //item class responsible for:
 //remembering all items
