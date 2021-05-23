@@ -62,19 +62,28 @@ class Item {
         }
         else if(e.target.innerText === "Edit"){
             // e.target.innerText = "Save"
-            this.editItem(e.target)
+            this.createEditForm(e.target)
         }
         else if(e.target.innerText === "Save"){
             e.target.innerText = "Edit"
+            this.saveEdits(e.target)
         }
     
      }
+
+    saveEdits(saveButton){
+        const editedItem = saveButton.parentElement //the whole div
+        const editedTitle = editedItem.querySelector(".edit-title").value
+        const editedDesc = editedItem.querySelector(".edit-description").value
+       debugger
+
+    }
 
     //if edit
     //event: patch
     //dom: turn button to save and turn text into input fields
     
-    editItem(editButton){
+    createEditForm(editButton){
         const itemCard = editButton.parentElement
         itemCard.innerHTML = 
         `
@@ -88,12 +97,7 @@ class Item {
             <button class="delete" data-id=${this.id}>Delete</button>
             <br><br>
         `  
-
     }
-
-
-    
-
 
      //optimistic rendering
     deleteItem(e){
