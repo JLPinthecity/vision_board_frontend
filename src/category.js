@@ -31,17 +31,22 @@ class Category {
     handleClick = (e) => {
         let filteredCategory 
         Category.all.forEach(cat => {
-            if(cat.element === this.element){
+            if(cat.element === this.element && !this.element.classList.contains("active")){
                 cat.element.classList.add('active')
                 filteredCategory = cat
             }
             else {
                 cat.element.classList.remove('active')
-                debugger
             }
         })
         Item.filterByCategory(filteredCategory)
     }
+
+    //clean state = user would click on one category && button does NOT contain active
+    //turn on active + define filtered category
+    //else (BUTTON ALREADY IS CLICKED)
+    //so turn off active
+
    
    
 

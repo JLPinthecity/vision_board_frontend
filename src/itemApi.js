@@ -52,7 +52,6 @@ class ItemApi {
             fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
             .then(r => r.json())
             .then(json => alert(json.message))
-            debugger
         }
 
 };
