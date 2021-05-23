@@ -1,9 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+
+}
+
+
+
 header {
     font-family: 'Newsreader', serif;
     font-size: 80px;
     text-align: center;
     color: rgb(0, 73, 46);
-   }
+}
 
 p {
     text-align: center;
@@ -11,11 +23,10 @@ p {
 }
 
 
-body{
+body {
       font-family: 'Futura';
       background-color: rgb(260 241 224);
-    
-    } 
+} 
 
 .cat-btn {
     box-shadow:inset 0px 0px 30px 0px #ffffff;

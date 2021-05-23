@@ -41,8 +41,7 @@ class Category {
         })
         Item.filterByCategory(filteredCategory)
     }
-
-    //clean state = user would click on one category && button does NOT contain active
+    //clean state = user would click on one category && button does NOT contain active yet
     //turn on active + define filtered category
     //else (BUTTON ALREADY IS CLICKED)
     //so turn off active
