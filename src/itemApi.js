@@ -41,18 +41,41 @@ class ItemApi {
         })
 };
 
-        deleteItem = (id) => {
-            const configObj = {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                }
-            };
-            fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
-            .then(r => r.json())
-            .then(json => alert(json.message))
-        }
+    deleteItem = (id) => {
+        const configObj = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            }
+        };
+        fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
+        .then(r => r.json())
+        .then(json => alert(json.message))
+    }
+
+    editItem = (edits) => {
+
+        const editFormData = {title, description};
+       
+        const configObj = {
+           method: "PATCH",
+           headers: {
+               "Content-Type": "application/json",
+           },
+           body: JSON.stringify(editFormData)
+       };
+    
+        fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
+        .then(r => r.json())
+        .then(json => {
+            // const i = new Item({id: json.data.id, ...json.data.attributes})
+            // i.appendToDom()
+        })
+    
+        debugger
+    }
+
 
 };
 
