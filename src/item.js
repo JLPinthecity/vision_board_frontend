@@ -15,7 +15,6 @@ class Item {
         this.element.setAttribute("data-id", this.id)
         this.element.setAttribute("class", "item")
 
-
         this.element.addEventListener('click', this.handleEditorDelete)
 
         Item.all.push(this)
@@ -62,7 +61,8 @@ class Item {
            this.deleteItem(e)
         }
         else if(e.target.innerText === "Edit"){
-            this.editItem(e)
+            // e.target.innerText = "Save"
+            this.editItem(e.target)
         }
         else if(e.target.innerText === "Save"){
             e.target.innerText = "Edit"
@@ -74,9 +74,20 @@ class Item {
     //event: patch
     //dom: turn button to save and turn text into input fields
     
-    editItem(e){
-        e.target.innerText = "Save"
-        debugger
+    editItem(editButton){
+        const itemCard = editButton.parentElement
+        itemCard.innerHTML = 
+        `
+            <img src=${this.image_url}>
+            <a href="${this.url}" target="_blank"><h3><input type="text" class="edit-title" value="${this.title}"></h3></a>
+            <small class="text-muted"><input type="text" class="edit-description" value="${this.description}"></small><br><br>
+            <strong>Category:</strong> ${this.category.name}
+
+            <br><br>
+            <button class="edit" data-id=${this.id}>Save</button>
+            <button class="delete" data-id=${this.id}>Delete</button>
+            <br><br>
+        `  
 
     }
 
