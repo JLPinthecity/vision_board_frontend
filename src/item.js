@@ -73,8 +73,11 @@ class Item {
 
     saveEdits(saveButton){
         const editedItem = saveButton.parentElement //the whole div
+        this.title = editedItem.querySelector(".edit-title").value
+        this.description = editedItem.querySelector(".edit-description").value
+        
         //give data to itemapi method that will make patch -- PLACEHOLDER WHILE WORKING ON EDIT METHOD IN API CLASS
-        itemApi.editItem(editedItem)
+        itemApi.editItem(this)
     }
 
     //if edit
@@ -102,7 +105,7 @@ class Item {
         this.element.remove()
         const id = this.id
         itemApi.deleteItem(id)
-        debugger
+ 
         //if delete, remove element
         //submit fetch request to delete
      }   

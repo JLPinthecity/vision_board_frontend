@@ -54,13 +54,12 @@ class ItemApi {
         .then(json => alert(json.message))
     }
 
-    editItem = (editedItem) => {
-        const editedTitle = editedItem.querySelector(".edit-title").value
-        const editedDesc = editedItem.querySelector(".edit-description").value
-        const itemId = parseInt(editedItem.dataset.id)
-   
-        const editFormData = {title: editedTitle , description: editedDesc, id: itemId};
-
+    editItem = (item) => {
+        
+        let {title, description} = item
+       
+        const editFormData = {title, description}
+       
         const configObj = {
            method: "PATCH",
            headers: {
@@ -68,12 +67,12 @@ class ItemApi {
                Accept: "application/json"
            },
            body: JSON.stringify(editFormData)
-       
+    
        };
     
-        fetch(`http://localhost:3000/api/v1/items/${itemId}`, configObj)
+        fetch(`http://localhost:3000/api/v1/items/${item.id}`, configObj)
         .then(r => r.json())
-        .then(json => editedItem.render())
+        .then(json => item.render())
     }
 
 
