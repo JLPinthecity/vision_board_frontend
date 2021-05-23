@@ -58,19 +58,17 @@ class Item {
         e.preventDefault()
         if(e.target.innerText === "Delete"){
            this.deleteItem(e)
-
-      
         }
     
      }
 
      //optimistic rendering
      deleteItem(e){
-        e.target.parentElement.parentElement
+        this.element.remove()
         const id = this.id
-
-         debugger
-         //if delete, remove element
+        itemApi.deleteItem(id)
+        debugger
+        //if delete, remove element
         //submit fetch request to delete
      }
         

@@ -39,8 +39,11 @@ class ItemApi {
             const i = new Item({id: json.data.id, ...json.data.attributes})
             i.appendToDom()
         })
-
 };
+
+        deleteItem(id){
+            console.log("insidedelete")
+        }
 
 };
 
