@@ -29,6 +29,7 @@ class ItemApi {
            method: "POST",
            headers: {
                "Content-Type": "application/json",
+               "Accept": "application/json"
            },
            body: JSON.stringify(formData)
        };
@@ -41,8 +42,17 @@ class ItemApi {
         })
 };
 
-        deleteItem(id){
-            console.log("insidedelete")
+        deleteItem = (id) => {
+            const configObj = {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }
+            };
+            fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
+            .then(r => r.json())
+            .then(json => alert(json.message))
         }
 
 };
