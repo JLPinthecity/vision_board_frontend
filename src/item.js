@@ -25,11 +25,12 @@ class Item {
         this.element.innerHTML = `
             <img src=${this.image_url}>
             <a href="${this.url}" target="_blank"><h3>${this.title}</h3></a>
-            <p><strong>Category:</strong> ${this.category.name}<p>
-            <small class="text-muted">${this.description}</small>
+            <small class="text-muted">${this.description}</small><br><br>
+            <strong>Category:</strong> ${this.category.name}
             <br><br>
             <button class="edit" data-id=${this.id}>Edit</button>
             <button class="delete" data-id=${this.id}>Delete</button>
+            <br><br>
         `  
         return this.element //returning it would mke it easier to attach method to dom 
     };
