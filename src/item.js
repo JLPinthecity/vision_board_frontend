@@ -35,7 +35,6 @@ class Item {
         return this.element //returning it would mke it easier to attach method to dom 
     };
 
-  
     appendToDom(){
       this.render()
       Item.container.appendChild(this.element)
@@ -62,8 +61,16 @@ class Item {
         if(e.target.innerText === "Delete"){
            this.deleteItem(e)
         }
+        else if(e.target.innerText === "Edit"){
+            console.log("inside edit")
+        }
     
      }
+
+    //if edit
+    //event: patch
+    //dom: turn button to save 
+
 
      //optimistic rendering
      deleteItem(e){
@@ -78,18 +85,11 @@ class Item {
             
 }
         
-        //if edit
-        //event: patch
-        //dom: turn button to save 
 
-
-
- 
 
 //item class responsible for:
 //remembering all items
 //setting up properties of each item 
 //html we want on dom for each item
 //attach event listeners to each item
-
 //add filter by category method 
