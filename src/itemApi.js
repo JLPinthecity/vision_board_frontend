@@ -54,14 +54,22 @@ class ItemApi {
         .then(json => alert(json.message))
     }
 
-    editItem = (edits) => {
-       
+    editItem = (editedItem) => {
+        const editedTitle = editedItem.querySelector(".edit-title").value
+        const editedDesc = editedItem.querySelector(".edit-description").value
+        const itemId = parseInt(editedItem.dataset.id)
+   
+        const editFormData = {title: editedTitle , description: editedDesc, id: itemId};
+
+        debugger
         const configObj = {
            method: "PATCH",
            headers: {
                "Content-Type": "application/json",
+               Accept: "application/json"
            },
-           body: JSON.stringify(edits)
+           body: JSON.stringify(editFormData)
+       
        };
     
         fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)
