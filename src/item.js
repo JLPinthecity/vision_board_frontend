@@ -63,30 +63,37 @@ class Item {
         }
         else if(e.target.innerText === "Edit"){
             console.log("inside edit")
+            this.editItem(e)
         }
     
      }
 
     //if edit
     //event: patch
-    //dom: turn button to save 
+    //dom: turn button to save and turn text into input fields
+    
+    editItem(e){
+        e.target.innerText = "Save"
+        debugger
+
+    }
+
+
+    
 
 
      //optimistic rendering
-     deleteItem(e){
+    deleteItem(e){
         this.element.remove()
         const id = this.id
         itemApi.deleteItem(id)
         debugger
         //if delete, remove element
         //submit fetch request to delete
-     }
-        
+     }   
             
 }
         
-
-
 //item class responsible for:
 //remembering all items
 //setting up properties of each item 
