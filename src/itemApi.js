@@ -55,15 +55,13 @@ class ItemApi {
     }
 
     editItem = (edits) => {
-
-        const editFormData = {title, description};
        
         const configObj = {
            method: "PATCH",
            headers: {
                "Content-Type": "application/json",
            },
-           body: JSON.stringify(editFormData)
+           body: JSON.stringify(edits)
        };
     
         fetch(`http://localhost:3000/api/v1/items/${id}`, configObj)

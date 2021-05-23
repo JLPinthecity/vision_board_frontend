@@ -75,10 +75,11 @@ class Item {
         const editedItem = saveButton.parentElement //the whole div
         const editedTitle = editedItem.querySelector(".edit-title").value
         const editedDesc = editedItem.querySelector(".edit-description").value
-
+        const itemId = parseInt(editedItem.dataset.id)
+debugger
         const editFormData = {editedTitle, editedDesc}
 
-        //give data to itemapi method that will make patch 
+        //give data to itemapi method that will make patch -- PLACEHOLDER WHILE WORKING ON EDIT METHOD IN API CLASS
         itemApi.editItem(editFormData)
 
     }
