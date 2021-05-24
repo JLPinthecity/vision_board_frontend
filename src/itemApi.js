@@ -16,6 +16,7 @@ class ItemApi {
     };
 
     createItem(){
+        debugger
         const title = document.getElementById("item-title").value
         const description = document.getElementById("item-description").value
         const image_url = document.getElementById("item-link").value
@@ -24,7 +25,7 @@ class ItemApi {
         const category_id = parseInt(categorySelection)
    
         const formData = {title, description, image_url, url, category_id};
-       
+
         const configObj = {
            method: "POST",
            headers: {
@@ -36,6 +37,7 @@ class ItemApi {
         fetch(this.endPoint, configObj)
         .then(r => r.json())
         .then(json => {
+            debugger
             const i = new Item({id: json.data.id, ...json.data.attributes})
             i.appendToDom()
         })
@@ -55,7 +57,6 @@ class ItemApi {
     }
 
     editItem = (item) => {
-        debugger
         let {title, description} = item
        
         const editFormData = {title, description}

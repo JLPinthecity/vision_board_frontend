@@ -54,7 +54,7 @@ class Item {
         }
     }
 
-     handleEditorDelete = (e) => {
+    handleEditorDelete = (e) => {
         e.preventDefault()
         if(e.target.innerText === "Delete"){
            this.deleteItem(e)
@@ -68,7 +68,7 @@ class Item {
             this.saveEdits(e.target)
         }
     
-     }
+    }
 
     saveEdits(saveButton){
         const editedItem = saveButton.parentElement //the whole div
