@@ -13,7 +13,6 @@ class Item {
 
         this.element = document.createElement("div") //set the html element that will contain item card
         this.element.setAttribute("data-id", this.id)
-        this.element.setAttribute("class", "flexbox-item")
 
         this.element.addEventListener('click', this.handleEditorDelete)
 
