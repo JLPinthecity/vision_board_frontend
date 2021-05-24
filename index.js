@@ -1,4 +1,4 @@
-const itemForm = document.getElementById("create-vision-board-item-form")
+const itemForm = document.getElementById("item-form")
 const itemApi = new ItemApi()
 const categoryApi = new CategoryApi()
 
