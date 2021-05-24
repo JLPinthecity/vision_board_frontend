@@ -1,14 +1,12 @@
-/* .container {
-    display: flex;
-    flex-flow: row wrap;
-    
+#vision-board-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 10fr));
 }
 
-.item {
-    flex-shrink: 3; 
-} */
-
-
+img {
+    width: 100%;
+}
 
 header {
     font-family: 'Newsreader', serif;
@@ -58,3 +56,10 @@ body {
     color: rgb(60, 19, 14);
     font-size: 20px;
   }
+
+input, select{
+  width: 15%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius:3px;
+}

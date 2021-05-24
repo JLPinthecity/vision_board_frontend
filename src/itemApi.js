@@ -55,7 +55,7 @@ class ItemApi {
     }
 
     editItem = (item) => {
-        
+        debugger
         let {title, description} = item
        
         const editFormData = {title, description}

@@ -13,7 +13,7 @@ class Item {
 
         this.element = document.createElement("div") //set the html element that will contain item card
         this.element.setAttribute("data-id", this.id)
-        this.element.setAttribute("class", "item")
+        this.element.setAttribute("class", "flexbox-item")
 
         this.element.addEventListener('click', this.handleEditorDelete)
 
@@ -76,7 +76,6 @@ class Item {
         this.title = editedItem.querySelector(".edit-title").value
         this.description = editedItem.querySelector(".edit-description").value
         
-        //give data to itemapi method that will make patch -- PLACEHOLDER WHILE WORKING ON EDIT METHOD IN API CLASS
         itemApi.editItem(this)
     }
 
